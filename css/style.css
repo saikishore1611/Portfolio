@@ -169,6 +169,77 @@ textarea {
   @media only screen and (max-width: 56.25em) {
     .sec-pad {
       padding: 8rem 0; } }
+.left-margin {
+      margin-left: -50px; 
+	  font-size: 20px;
+    }
+.text-block {
+        margin: 30px 0px 30px -180px; /* top, right, bottom, left */
+        text-align: left;
+		font-size: 20px;
+    }
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.image-left {
+  width: 420px; /* Set the width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 30px; /* Space between image and text */
+}
+
+.text-right {
+  max-width: 900px; /* Adjust as needed */
+}
+.dot {
+  color: black; /* Dot color */
+  font-size: 16px; /* Dot size */
+  margin-right: 10px; /* Space between dot and text */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Vertically align items if needed */
+  justify-content: space-between; /* Optional, space out text and image */
+}
+
+.text1-left {
+  flex: 1; /* Allows text to take available space */
+}
+
+.image1-right {
+  width: 400px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px; /* Space between text and image */
+}
+.text2-left {
+  flex: 1; /* Allows text to take available space */
+}
+
+.image2-right {
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px;
+  /* Space between text and image */
+}
+.container {
+  width: 300px; /* Same width as the image */
+  height: 300px; /* Same height as the image for a square container */
+  position: relative; /* Establish a containing block for absolute positioning */
+  overflow: hidden; /* Hide overflow to keep the rounded shape */
+  border-radius: 20px; /* Same curvature as the image */
+}
+
+.rounded-image {
+  position: absolute;
+  top: 0; /* Align to the top edge */
+  right: 0; /* Align to the right edge */
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Rounded corners */
+}
+
 
 .text-primary {
   color: #fff;
@@ -275,7 +346,7 @@ textarea {
 .projects__row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-gap: 5rem;
+  grid-gap: 3rem;
   margin-bottom: 11rem; }
   @media only screen and (max-width: 56.25em) {
     .projects__row {

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            text-align: center;
+            padding: 80px 20px 20px;
+        }
+        img {
+            max-width: 60%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:goBack();" class="back-button">&#8592;</a>
+    <div class="container">
+        <img src="codechef.png" alt="Your Image Description">
+    </div>
+
+    <script>
+        function goBack() {
+            // Attempt to close the window
+            if (window.history.length > 1) {
+                // Navigate back in history if possible
+                window.history.back();
+            } else {
+                // Close the window if it's a popup or was opened via script
+                window.close();
+            }
+        }
+
+        // Auto-close the page after a delay if opened via a script
+        window.onload = function() {
+            setTimeout(function() {
+                if (window.opener) {
+                    window.close();
+                }
+            }, 5000); // Adjust the timeout as needed
+        };
+    </script>
+</body>
+</html>
